@@ -12,8 +12,8 @@
     <!-- config for our rust wasm binary. go to https://trunkrs.dev/assets/#rust for more customization -->
     
 <script type="module" nonce="rwEmvh39mhRu2OVLdt3qdw==">
-import init, * as bindings from '/dist-2da3b22b391e4adb.js';
-const wasm = await init({ module_or_path: '/dist-2da3b22b391e4adb_bg.wasm' });
+import init, * as bindings from './dist-2da3b22b391e4adb.js';
+const wasm = await init({ module_or_path: './dist-2da3b22b391e4adb_bg.wasm' });
 
 
 window.wasmBindings = bindings;
@@ -25,7 +25,7 @@ dispatchEvent(new CustomEvent("TrunkApplicationStarted", {detail: {wasm}}));
     <!-- this is the base url relative to which other urls will be constructed. trunk will insert this from the public-url option -->
     <base href="/" />
 
-    <link rel="icon" href="/favicon-f402c8741ce815ec.ico" integrity="sha384&#x2D;jNOAE6jgE03LznIulCTVP6BH4NrTuROFjP9wj8bV1UUMJKtZAvstFpIAP3PDcFpx"/>
+    <link rel="icon" href="./favicon-f402c8741ce815ec.ico" integrity="sha384&#x2D;jNOAE6jgE03LznIulCTVP6BH4NrTuROFjP9wj8bV1UUMJKtZAvstFpIAP3PDcFpx"/>
 
 
     
@@ -36,8 +36,8 @@ dispatchEvent(new CustomEvent("TrunkApplicationStarted", {detail: {wasm}}));
     
 
 
-    <link rel="manifest" href="assets/manifest.json">
-    <link rel="apple-touch-icon" href="assets/icon_ios_touch_192.png">
+    <link rel="manifest" href="./assets/manifest.json">
+    <link rel="apple-touch-icon" href="./assets/icon_ios_touch_192.png">
     <meta name="theme-color" media="(prefers-color-scheme: light)" content="white">
     <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#404040">
 
@@ -127,7 +127,7 @@ dispatchEvent(new CustomEvent("TrunkApplicationStarted", {detail: {wasm}}));
             }
         }
     </style>
-<link rel="modulepreload" href="/dist-2da3b22b391e4adb.js" crossorigin=anonymous integrity="sha384-3f3V+FXbDjDfiZGRQjzQi5/XS5XPPfhHIlUjJUwoYvRW9sVOmMNw8gPipeEFMDln"><link rel="preload" href="/dist-2da3b22b391e4adb_bg.wasm" crossorigin=anonymous integrity="sha384-+znV78XcAscAzZDJwC9as3V0yogxOfsA0FJp97b/WD9qEo12bhXWteCp7UhrLjJn" as="fetch" type="application/wasm"></head>
+<link rel="modulepreload" href="./dist-2da3b22b391e4adb.js" crossorigin=anonymous integrity="sha384-3f3V+FXbDjDfiZGRQjzQi5/XS5XPPfhHIlUjJUwoYvRW9sVOmMNw8gPipeEFMDln"><link rel="preload" href="./dist-2da3b22b391e4adb_bg.wasm" crossorigin=anonymous integrity="sha384-+znV78XcAscAzZDJwC9as3V0yogxOfsA0FJp97b/WD9qEo12bhXWteCp7UhrLjJn" as="fetch" type="application/wasm"></head>
 
 <body>
     <!-- The WASM code will resize the canvas dynamically -->
@@ -148,7 +148,7 @@ dispatchEvent(new CustomEvent("TrunkApplicationStarted", {detail: {wasm}}));
         // We disable caching during development so that we always view the latest version.
         if ('serviceWorker' in navigator && window.location.hash !== "#dev") {
             window.addEventListener('load', function () {
-                navigator.serviceWorker.register('sw.js');
+                navigator.serviceWorker.register('./sw.js');
             });
         }
     </script>
